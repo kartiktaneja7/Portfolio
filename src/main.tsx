@@ -12,7 +12,6 @@ if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
       <ThemeProvider>
-        /* Add the basename prop to match your GitHub repository name */
         <BrowserRouter basename="/Portfolio">
           <App />
         </BrowserRouter>
