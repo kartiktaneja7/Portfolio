@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router";
+// Change this line - import from react-router-dom, not react-router
+import { BrowserRouter } from "react-router-dom";
 import ThemeProvider from "./provider/page";
 import "./index.css";
 import App from "./App.jsx";
@@ -11,7 +12,8 @@ if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
       <ThemeProvider>
-        <BrowserRouter>
+        /* Add the basename prop to match your GitHub repository name */
+        <BrowserRouter basename="/Portfolio">
           <App />
         </BrowserRouter>
       </ThemeProvider>
