@@ -1,6 +1,7 @@
 import HeroImg from "../../assets/hero.jpg";
 import { useTheme } from "../../provider/page";
-import OlovaLogo from "../../assets/olova.png";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 export default function About() {
   const { theme } = useTheme();
@@ -49,6 +50,65 @@ export default function About() {
                   height={929}
                 />
               </div>
+              
+              {/* Social Media Buttons */}
+              <div className="flex justify-center gap-3 mt-4">
+                <a 
+                  href="https://github.com/kartiktaneja7" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`p-2 rounded-full transition-colors duration-300 ${
+                    theme === "dark" 
+                      ? "bg-gray-800 text-gray-200 hover:bg-gray-700" 
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  }`}
+                >
+                  <FaGithub className="w-5 h-5" />
+                  <span className="sr-only">GitHub</span>
+                </a>
+                
+                <a 
+                  href="https://www.linkedin.com/in/kartik-taneja7" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`p-2 rounded-full transition-colors duration-300 ${
+                    theme === "dark" 
+                      ? "bg-blue-900 text-blue-200 hover:bg-blue-800" 
+                      : "bg-blue-100 text-blue-700 hover:bg-blue-200"
+                  }`}
+                >
+                  <FaLinkedin className="w-5 h-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </a>
+                
+                <a 
+                  href="https://leetcode.com/kartiktaneja7" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`p-2 rounded-full transition-colors duration-300 ${
+                    theme === "dark" 
+                      ? "bg-yellow-900 text-yellow-200 hover:bg-yellow-800" 
+                      : "bg-yellow-100 text-yellow-700 hover:bg-yellow-200"
+                  }`}
+                >
+                  <SiLeetcode className="w-5 h-5" />
+                  <span className="sr-only">LeetCode</span>
+                </a>
+                
+                <a 
+                  href="https://instagram.com/kartiktaneja7" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`p-2 rounded-full transition-colors duration-300 ${
+                    theme === "dark" 
+                      ? "bg-pink-900 text-pink-200 hover:bg-pink-800" 
+                      : "bg-pink-100 text-pink-700 hover:bg-pink-200"
+                  }`}
+                >
+                  <FaInstagram className="w-5 h-5" />
+                  <span className="sr-only">Instagram</span>
+                </a>
+              </div>
             </div>
 
             <div className="relative space-y-4">
@@ -57,15 +117,15 @@ export default function About() {
                   theme === "dark" ? "text-gray-300" : "text-gray-600"
                 }`}
               >
-                Hello! I am a DevOps Engineer with 2.8 years of experience in deploying and managing cloud infrastructure, CI/CD pipelines, automation, and monitoring. I've worked in the Banking and Telecommunications industries, optimizing backend services and enhancing observability using tools like Prometheus, OpenTelemetry, and Elasticsearch. My technical skills include AWS, Terraform, Docker, Kubernetes, Python, Java, and Bash scripting. I am also skilled in building event-driven architectures with Kafka and implementing scalable, high-performance systems.{" "}
+                Hello! I am a Certified RHCE/RHCSA DevOps Engineer with 2.8 years of experience in deploying and managing cloud infrastructure, CI/CD pipelines, automation, and monitoring. I've worked in the Financial and Telecommunication industries, optimizing backend services and enhancing observability using tools like Prometheus, Open Telemetry, and Elasticsearch. Gained technical skills in AWS, Terraform, Docker, Kubernetes, Python, Java, Ansible and Shell scripting. I am also skilled in building event-driven architectures with Kafka and implementing scalable, high-performance systems.{" "}
                 <span
                   className={`font-bold ${
                     theme === "dark" ? "text-white" : "text-gray-900"
                   }`}
                 >
-                   Currently, I am expanding my expertise through a Master's in Information Systems at Northeastern University
+                   Consistently demonstrating the ability to master skills and technologies rapidly and adapt to evolving environments. Ability to develop creative solutions to address challenges. Currently, I am expanding my expertise through a Master's in Information Systems, 
                 </span>
-                , aiming to leverage my skills in upcoming Co-op/Internship opportunities.
+                 aiming to leverage my skills in upcoming Co-op/Internship opportunities.
               </p>
               <p
                 className={`${
@@ -91,8 +151,7 @@ export default function About() {
                   >
                     I'm a lifelong learner and innovator, driven by a desire to
                     contribute to the developer community with new ideas and
-                    tools that deliver real value. As the creator of OlovaJS,
-                    I'm pushing the boundaries of JavaScript frameworks to
+                    tools that deliver real value. I'm pushing the boundaries of JavaScript frameworks to
                     empower developers worldwide.
                   </p>
 
@@ -105,14 +164,7 @@ export default function About() {
                       Student At,
                     </cite>
                     <div className="flex items-center gap-2">
-                      <img
-                        className={`h-5 w-fit ${theme === "dark" ? "" : ""}`}
-                        src={OlovaLogo}
-                        alt="Northeastern Logo"
-                        height="20"
-                        width="auto"
-                      />
-                      <span>Northeastern University</span>
+                      <span>Northeastern University, Boston</span>
                     </div>
                   </div>
                 </blockquote>
